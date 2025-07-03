@@ -61,7 +61,7 @@ public class AdvertController {
     })
     @PostMapping
     public ResponseEntity<Advert> create(@Valid @RequestBody CreateAdvertDto req) {
-        Advert advert = service.create(new Advert(req.title(), req.description(), req.photo()));
+        Advert advert = service.create(new Advert(req.title(),req.photo(), req.description()));
         return ResponseEntity.ok(advert);
     }
 
